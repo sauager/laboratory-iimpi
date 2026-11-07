@@ -10,8 +10,8 @@ def test_add(calc):
     assert calc.add(-1.0, 1.0) == 0.0
 
 def test_subtract(calc):
-    assert calc.substract(5.0, 3.0) == 2.0
-    assert calc.substract(1.0, 5.0) == -4.0
+    assert calc.subtract(5.0, 3.0) == 2.0
+    assert calc.subtract(1.0, 5.0) == -4.0
 
 def test_multiply(calc):
     assert calc.multiply(3.0, 2.0) == 6.0
@@ -35,10 +35,10 @@ def test_divide_parametrize(calc, a, b, expected):
     assert calc.divide(a, b) == expected
 
 @pytest.mark.parametrize("a, b, expected", [
-    (5.5, 2.0, 2.75),
-    (7.5, 2.5, 3.0),
-    (1.0, 4.0, 0.25),
-    (-6.0, 2.0, -3.0),
+    (5.5, 2.0, 11.0),
+    (7.5, 2.5, 18.75),
+    (1.0, 4.0, 4.0),
+    (-6.0, 2.0, -12.0),
 ])
 def test_multiply_parametrize(calc, a, b, expected):
     assert calc.multiply(a, b) == expected
