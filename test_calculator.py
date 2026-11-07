@@ -14,7 +14,7 @@ def test_substract(calc):
     assert calc.substract(1.0, 5.0) == -4.0
 
 def test_multiply(calc):
-    assert calc.multiply(3.0, 3.0) == 9.0
+    assert calc.multiply(3.0, 2.0) == 6.0
     assert calc.substract(-2.0, 4.0) == -8.0
 
 def test_divide(calc):
