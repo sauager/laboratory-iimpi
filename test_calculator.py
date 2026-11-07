@@ -24,3 +24,21 @@ def test_divide_by_zero(calc):
     #Тест ожидает ошибку ValueError при делении на ноль
     with pytest.raises(ValueError):
         calc.divide(5.0, 0.0)
+
+@pytest.mark.parametrize("a, b, expected", [
+    (5.5, 2.0, 2.75),
+    (7.5, 2.5, 3.0),
+    (1.0, 4.0, 0.25),
+    (-6.0, 2.0, -3.0),
+])
+def test_divide_parametrize(calc, a, b, expected):
+    assert calc.divide(a, b) == expected
+
+@pytest.mark.parametrize("a, b, expected", [
+    (5.5, 2.0, 2.75),
+    (7.5, 2.5, 3.0),
+    (1.0, 4.0, 0.25),
+    (-6.0, 2.0, -3.0),
+])
+def test_multiply_parametrize(calc, a, b, expected):
+    assert calc.multiply(a, b) == expected
